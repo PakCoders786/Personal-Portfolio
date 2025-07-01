@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Haseeb- Creative Developer Portfolio</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <!-- Removed duplicate style.css link -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white text-gray-800 overflow-x-hidden">
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="text-2xl font-['Pacifico'] text-primary">Muhammad Haseeb</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link active text-gray-800 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-primary transition-colors">About</a>
+                <a href="#portfolio" class="nav-link text-gray-800 hover:text-primary transition-colors">Portfolio</a>
+                <a href="#skills" class="nav-link text-gray-800 hover:text-primary transition-colors">Skills</a>
+                <a href="#blog" class="nav-link text-gray-800 hover:text-primary transition-colors">Blog</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <label class="custom-switch">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="switch-slider"></span>
+                </label>
+                
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800" id="mobileMenuBtn">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobileMenu" class="hidden md:hidden bg-white w-full py-4 px-6 shadow-md">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-800 hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-primary transition-colors">About</a>
+                <a href="#portfolio" class="text-gray-800 hover:text-primary transition-colors">Portfolio</a>
+                <a href="#skills" class="text-gray-800 hover:text-primary transition-colors">Skills</a>
+                <a href="#blog" class="text-gray-800 hover:text-primary transition-colors">Blog</a>
+                <a href="#contact" class="text-gray-800 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="fixed left-6 top-1/2 transform -translate-y-1/2 z-40 hidden md:flex flex-col items-center space-y-6">
+        <a href="https://github.com/PakCoders786" target="_blank" class="social-icon w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary">
+            <i class="ri-github-fill ri-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-haseeb-980b16366/" target="_blank" class="social-icon w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary">
+            <i class="ri-linkedin-fill ri-lg"></i>
+        </a>
+        <a href="https://dribbble.com/mh324" target="_blank" class="social-icon w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary">
+            <i class="ri-dribbble-fill ri-lg"></i>
+        </a>
+        
+        <div class="h-20 w-px bg-gray-300"></div>
+    </div>
+
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="floating-shapes">
+                <span class="absolute top-[15%] left-[10%] text-primary text-opacity-5 text-9xl">&lt;/&gt;</span>
+                <span class="absolute bottom-[20%] right-[15%] text-primary text-opacity-5 text-8xl">{}</span>
+                <span class="absolute top-[40%] right-[30%] text-primary text-opacity-5 text-7xl">#</span>
+                <span class="absolute bottom-[35%] left-[25%] text-primary text-opacity-5 text-8xl">*</span>
+            </div>
+            
+            <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-3/5 hero-bg py-12 px-6 md:px-12 relative z-10">
+                    <h4 class="text-lg md:text-xl font-medium text-gray-600 mb-2">Hello, I'm</h4>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Muhammad Haseeb</h1>
+                    <h2 class="text-2xl md:text-3xl font-medium text-primary mb-6 typing-effect" id="typingText">Design. Code. Inspire.</h2>
+                    <p class="text-gray-600 text-lg mb-8 max-w-xl">A multidisciplinary creative professional combining graphic design artistry, Python web development expertise, and front-end finesse to build beautiful, functional digital experiences.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#portfolio" class="px-8 py-3 bg-primary text-blue-500 font-medium !rounded-button whitespace-nowrap hover:bg-opacity-90 bg-blue-600 transition-colors text-white">View My Work</a>
+                        <a href="#contact" class="px-8 py-3 border-2 border-primary text-primary font-medium !rounded-button whitespace-nowrap hover:bg-primary hover:text-blue-500 transition-colors">Get In Touch</a>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-2/5 mt-12 md:mt-0">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-10 rounded-full"></div>
+                        <img src="IMG_20211231_232048_4.jpg"  alt="Alex Morgan" class="w-105 h-105 object-cover rounded-full shadow-xl relative z-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">My journey from design to development has shaped my unique approach to creating digital experiences that are both beautiful and functional.</p>
+                </div>
+                
+                <div class="relative timeline max-w-4xl mx-auto pl-8 md:pl-10">
+                    <div class="timeline-item relative pb-12">
+                        <h3 class="text-xl font-bold mb-2">2015 - The Beginning</h3>
+                        <p class="text-gray-600 mb-4">Graduated with a degree in Graphic Design and started working as a junior designer at a creative agency in San Francisco.</p>
+                        <div class="bg-white p-4 rounded shadow-md">
+                            <p class="italic text-gray-500">"I was always fascinated by the intersection of aesthetics and functionality. My design background gave me a strong foundation in visual communication."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pb-12">
+                        <h3 class="text-xl font-bold mb-2">2017 - The Transition</h3>
+                        <p class="text-gray-600 mb-4">Discovered my passion for web development and began learning HTML, CSS, and JavaScript while continuing design work.</p>
+                        <div class="bg-white p-4 rounded shadow-md">
+                            <p class="italic text-gray-500">"The ability to bring my designs to life through code was transformative. I spent countless nights learning to code, and it opened up a whole new world of possibilities."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pb-12">
+                        <h3 class="text-xl font-bold mb-2">2019 - Python Discovery</h3>
+                        <p class="text-gray-600 mb-4">Fell in love with Python and began developing backend solutions, combining my frontend skills to create full-stack applications.</p>
+                        <div class="bg-white p-4 rounded shadow-md">
+                            <p class="italic text-gray-500">"Python's elegance and readability resonated with me. I found that my design thinking helped me write cleaner, more intuitive code."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative pb-12">
+                        <h3 class="text-xl font-bold mb-2">2021 - Freelance Journey</h3>
+                        <p class="text-gray-600 mb-4">Took the leap to become a freelance creative developer, working with clients across various industries on both design and development projects.</p>
+                        <div class="bg-white p-4 rounded shadow-md">
+                            <p class="italic text-gray-500">"Going independent allowed me to fully embrace my multidisciplinary approach. I could now offer clients end-to-end solutions from concept to deployment."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item relative">
+                        <h3 class="text-xl font-bold mb-2">2023 - Present</h3>
+                        <p class="text-gray-600 mb-4">Currently working as a creative technologist, specializing in crafting unique digital experiences that blend artistry with technical excellence.</p>
+                        <div class="bg-white p-4 rounded shadow-md">
+                            <p class="italic text-gray-500">"Today, I thrive in the space between design and development. My goal is to create work that not only looks beautiful but also solves real problems through thoughtful implementation."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">My Portfolio</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">A selection of my recent work spanning graphic design, Python development, and front-end projects.</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-10">
+                    <button class="portfolio-filter px-6 py-2 !rounded-button whitespace-nowrap bg-primary text-white" data-filter="all">All Projects</button>
+                    <button class="portfolio-filter px-6 py-2 !rounded-button whitespace-nowrap bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors" data-filter="design">Design</button>
+                    <button class="portfolio-filter px-6 py-2 !rounded-button whitespace-nowrap bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors" data-filter="python">Python</button>
+                    <button class="portfolio-filter px-6 py-2 !rounded-button whitespace-nowrap bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors" data-filter="frontend">Front-End</button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card group" data-category="design">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="calculator.png">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">Calculator</h3>
+                                <p class="text-white text-center mb-4">Complete Calculator for both scientific and simple calculations.</p>
+                                <div class="flex space-x-3">
+                                    <a href="" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">View Details</a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">Live Preview</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card group" data-category="python">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="projectplayer''.png">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">Harmony music player</h3>
+                                <p class="text-white text-center mb-4">Play Alan walker few songs.</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors"><a href=""></a></a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">GitHub Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card group" data-category="frontend">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20on%20multiple%20devices%2C%20showing%20responsive%20design%20with%20product%20listings%2C%20shopping%20cart%2C%20and%20checkout%20process%2C%20clean%20and%20minimal%20UI%20design%20with%20professional%20web%20development%20layout&width=600&height=400&seq=4&orientation=landscape" alt="E-Commerce Platform" class="w-full h-64 object-cover object-top transition-transform duration-500">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">E-Commerce Platform</h3>
+                                <p class="text-white text-center mb-4">Responsive e-commerce website with React frontend, featuring product filtering, cart functionality, and seamless checkout.</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">View Details</a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card group" data-category="design">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="https://readdy.ai/api/search-image?query=mobile%20app%20UI%20design%20for%20a%20fitness%20tracking%20application%2C%20showing%20multiple%20screens%20with%20workout%20tracking%2C%20statistics%2C%20and%20user%20profile%20interfaces%2C%20modern%20and%20clean%20design%20with%20gradient%20elements%20on%20organized%20presentation%20mockup&width=600&height=400&seq=5&orientation=landscape" alt="Fitness App UI Design" class="w-full h-64 object-cover object-top transition-transform duration-500">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">Fitness App UI Design</h3>
+                                <p class="text-white text-center mb-4">Comprehensive UI/UX design for a fitness tracking mobile application, including user flow, wireframes, and high-fidelity mockups.</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">View Details</a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">Case Study</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card group" data-category="python">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="https://readdy.ai/api/search-image?query=AI%20chatbot%20interface%20with%20Python%20backend%2C%20showing%20conversation%20flow%2C%20natural%20language%20processing%20capabilities%2C%20and%20machine%20learning%20components%2C%20professional%20software%20development%20project%20with%20technical%20elements%20and%20clean%20design&width=600&height=400&seq=6&orientation=landscape" alt="AI Chatbot" class="w-full h-64 object-cover object-top transition-transform duration-500">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">AI Chatbot</h3>
+                                <p class="text-white text-center mb-4">Python-based conversational AI using natural language processing and machine learning to provide intelligent customer support.</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">View Details</a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">GitHub Repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card group" data-category="frontend">
+                        <div class="relative overflow-hidden rounded shadow-lg">
+                            <img src="https://readdy.ai/api/search-image?query=interactive%20data%20visualization%20web%20application%20with%20charts%2C%20graphs%2C%20and%20user%20controls%2C%20showing%20frontend%20development%20with%20JavaScript%20frameworks%2C%20professional%20web%20development%20project%20with%20clean%20interface%20and%20modern%20design&width=600&height=400&seq=7&orientation=landscape" alt="Interactive Data Visualization" class="w-full h-64 object-cover object-top transition-transform duration-500">
+                            <div class="project-overlay absolute inset-0 bg-primary bg-opacity-90 flex flex-col justify-center items-center p-6 opacity-0 transition-opacity duration-300">
+                                <h3 class="text-xl font-bold text-white mb-2">Interactive Data Visualization</h3>
+                                <p class="text-white text-center mb-4">Dynamic data visualization tool built with D3.js and Vue, featuring interactive charts, filters, and responsive design.</p>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="px-4 py-2 bg-white text-primary !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">View Details</a>
+                                    <a href="#" class="px-4 py-2 border border-white text-white !rounded-button whitespace-nowrap hover:bg-white hover:text-primary transition-colors">Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#" class="px-8 py-3 border-2 border-primary text-primary font-medium !rounded-button whitespace-nowrap hover:bg-primary hover:text-white transition-colors">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Tech Stack</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">My toolkit spans design, frontend, and backend technologies, allowing me to create comprehensive solutions.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="tech-card bg-white p-8 rounded shadow-lg">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                            <i class="ri-palette-line ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Design Tools</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Adobe Photoshop</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="95%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Figma</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="90%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Adobe Illustrator</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="85%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Adobe XD</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="80%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Sketch</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card bg-white p-8 rounded shadow-lg">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                            <i class="ri-code-s-slash-line ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Python Development</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="90%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Flask</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="85%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Django</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="80%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">FastAPI</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="75%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Data Science (Pandas/NumPy)</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="70%" style="width: 0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card bg-white p-8 rounded shadow-lg">
+                        <div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                            <i class="ri-layout-line ri-2x"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6">Front-End Technologies</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="95%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="90%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">React</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="85%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Vue.js</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="80%" style="width: 0"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">TailwindCSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                                    <div class="skill-bar-fill h-full bg-blue-600 rounded-full transition-all duration-1000" data-width="90%" style="width: 0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Interactive Resume</h3>
+                    
+                    <div class="bg-white rounded shadow-lg overflow-hidden">
+                        <div class="flex border-b">
+                            <button class="resume-tab flex-1 py-4 px-6 font-medium border-b-2 border-primary" data-tab="experience">Experience</button>
+                            <button class="resume-tab flex-1 py-4 px-6 font-medium border-b-2 border-transparent" data-tab="education">Education</button>
+                            <button class="resume-tab flex-1 py-4 px-6 font-medium border-b-2 border-transparent" data-tab="certifications">Certifications</button>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="resume-content active" id="experience-content">
+                                <div class="space-y-8">
+                                    <div class="flex flex-col md:flex-row">
+                                       
+                                        <div class="md:w-2/3 mt-2 md:mt-0">
+                                            <h5 class="font-medium">Freelance</h5>
+                                            <p class="text-gray-600 mt-2">Working with select clients to create unique digital experiences that combine design excellence with technical innovation. Leading projects from concept to completion with a focus on user-centered design and clean code.</p>
+                                            <ul class="mt-4 space-y-2 text-gray-600">
+                                                <li class="flex items-start">
+                                                    <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                                    <span>Developed a custom e-commerce solution for a boutique fashion brand, increasing online sales by 45%</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                                    <span>Created an interactive data visualization platform for a financial services company</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                                    <span>Designed and built a custom CMS for a publishing company using Python and React</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                    
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-content hidden" id="education-content">
+                                <div class="space-y-8">
+                                    <div class="flex flex-col md:flex-row">
+                                        <div class="md:w-1/3">
+                                            <h4 class="font-bold">BS in Computer Sciences</h4>
+                                            <p class="text-primary">2022-current</p>
+                                        </div>
+                                        <div class="md:w-2/3 mt-2 md:mt-0">
+                                             
+                                            <h5 class="font-medium">National University of Modern Languages</h5>
+                                            
+                                            <p class="text-gray-600 mt-2"><i class="ri-check-line text-primary mt-1 mr-2"></i>Specialized in Web Development.</p>
+                                            <ul class="mt-4 space-y-2 text-gray-600">
+                                                
+                                                <li class="flex items-start">
+                                                    <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                                    <span>Research Assistant in the Human-Computer Interaction Lab</span>
+                                                </li>
+                                                <li class="flex items-start">
+                                                    <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                                                    <span>Published two papers on AI-assisted interface design</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-content hidden" id="certifications-content">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="bg-gray-50 p-6 rounded">
+                                        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-4">
+                                            <i class="ri-award-line ri-lg"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">NAVTTEC</h4>
+                                        <p class="text-gray-600 mb-2">UI/UX Graphic designer</p>
+                                        <p class="text-primary text-sm">Issued: January 2023</p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 p-6 rounded">
+                                        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-4">
+                                            <i class="ri-award-line ri-lg"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">Professional Python Developer</h4>
+                                        <p class="text-gray-600 mb-2">Python Institute</p>
+                                        <p class="text-primary text-sm">Issued: March 2022</p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 p-6 rounded">
+                                        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-4">
+                                            <i class="ri-award-line ri-lg"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">Google UX Design Professional Certificate</h4>
+                                        <p class="text-gray-600 mb-2">Google</p>
+                                        <p class="text-primary text-sm">Issued: September 2021</p>
+                                    </div>
+                                    
+                                    <div class="bg-gray-50 p-6 rounded">
+                                        <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mb-4">
+                                            <i class="ri-award-line ri-lg"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">Full-Stack Web Development</h4>
+                                        <p class="text-gray-600 mb-2">freeCodeCamp</p>
+                                        <p class="text-primary text-sm">Issued: July 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Blog & Insights</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Thoughts, learnings, and perspectives on design, development, and the creative process.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded shadow-lg overflow-hidden">
+                        <img src="projectplayer''.png" alt="The Intersection of Design and Code" class="w-full h-48 object-cover object-top">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="ri-calendar-line mr-1"></i> June 2, 2025
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="ri-time-line mr-1"></i> 5 min read
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">The Intersection of Design and Code</h3>
+                            <p class="text-gray-600 mb-4">How thinking like a designer makes you a better developer, and how understanding code creates more effective designers.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Design</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Development</span>
+                                </div>
+                                <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded shadow-lg overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=python%20code%20on%20computer%20screen%20with%20data%20visualization%20charts%20and%20graphs%2C%20showing%20programming%20and%20data%20analysis%20concepts%2C%20professional%20software%20development%20environment&width=600&height=400&seq=9&orientation=landscape" alt="Building Scalable Python Applications" class="w-full h-48 object-cover object-top">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="ri-calendar-line mr-1"></i> May 18, 2025
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="ri-time-line mr-1"></i> 8 min read
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Building Scalable Python Applications</h3>
+                            <p class="text-gray-600 mb-4">Strategies and best practices for creating Python applications that can grow with your user base and maintain performance.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Python</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Architecture</span>
+                                </div>
+                                <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded shadow-lg overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=modern%20UI%20design%20process%20showing%20wireframes%2C%20prototypes%2C%20and%20final%20interface%20designs%20on%20computer%20and%20tablet%20screens%2C%20professional%20design%20workflow%20with%20color%20palettes%20and%20typography%20elements&width=600&height=400&seq=10&orientation=landscape" alt="The Future of UI Animation" class="w-full h-48 object-cover object-top">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span class="flex items-center mr-4">
+                                    <i class="ri-calendar-line mr-1"></i> April 30, 2025
+                                </span>
+                                <span class="flex items-center">
+                                    <i class="ri-time-line mr-1"></i> 6 min read
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">The Future of UI Animation</h3>
+                            <p class="text-gray-600 mb-4">Exploring how subtle animations and micro-interactions can dramatically improve user experience and engagement.</p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">UI/UX</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">Animation</span>
+                                </div>
+                                <a href="#" class="text-primary font-medium hover:underline">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 bg-gray-50 rounded-lg p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-6 md:mb-0 md:mr-8">
+                            <h3 class="text-2xl font-bold mb-2">Subscribe to My Newsletter</h3>
+                            <p class="text-gray-600">Get the latest articles, tutorials, and insights delivered straight to your inbox.</p>
+                        </div>
+                        <div class="w-full md:w-auto flex flex-col sm:flex-row">
+                            <input type="email" placeholder="Your email address" class="px-4 py-2 border-none !rounded-button rounded-r-none focus:ring-2 focus:ring-primary w-full sm:w-64 mb-3 sm:mb-0 sm:mr-3 dark:bg-gray-700 dark:text-gray-200">
+                            <button class="px-4 py-2 bg-primary text-white !rounded-button rounded-l-none whitespace-nowrap hover:bg-opacity-90 transition-colors dark:bg-gray-200 dark:text-primary dark:hover:bg-primary dark:hover:text-white">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="w-full md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:border-primary" required></textarea>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="custom-checkbox mr-2" required>
+                                    <span class="text-gray-700">I agree to the privacy policy</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 bg-gray-100 p-8 md:p-12 flex flex-col">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mr-4">
+                                    <i class="ri-map-pin-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Location</h4>
+                                    <p class="text-gray-600">Rawalpindi,Pakistan</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mr-4">
+                                    <i class="ri-mail-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Email</h4>
+                                    <p class="text-gray-600">muhammadhaseeb.code@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 text-primary rounded-full mr-4">
+                                    <i class="ri-phone-line ri-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">Phone</h4>
+                                    <p class="text-gray-600">+92-343-5542474</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-grow relative overflow-hidden rounded-lg">
+                            <div style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');" class="absolute inset-0 bg-center bg-cover"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full shadow-lg animate-pulse">
+                                    <i class="ri-map-pin-fill ri-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between mb-12">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-['Pacifico'] text-white mb-4">Muhammad Haseeb</h3>
+                    <p class="text-gray-400 max-w-xs">Creating beautiful, functional digital experiences at the intersection of design and development.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-github-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-dribbble-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                            <li><a href="#portfolio" class="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
+                            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                            <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-bold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">UI/UX Design</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Python Development</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Brand Identity</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Digital Strategy</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                        <p class="text-gray-400 mb-4">Subscribe to get the latest updates.</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 w-full bg-gray-800 border-none !rounded-button rounded-r-none focus:ring-2 focus:ring-primary text-white dark:bg-gray-700 dark:text-gray-200">
+                            <button class="px-4 py-2 bg-primary text-white !rounded-button rounded-l-none whitespace-nowrap hover:bg-opacity-90 transition-colors dark:bg-gray-200 dark:text-primary dark:hover:bg-primary dark:hover:text-white">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 Alex Morgan. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+
+
+<style>
+
+</style>
+    
+</body>
+</html>
